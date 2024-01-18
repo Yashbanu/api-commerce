@@ -18,3 +18,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//Display Data 
+Route::get('display/{id?}',[ProductController::class,"display"] );
+
+//Insert Data
+Route::post("add",[ProductController::class,"addProduct"] );
+
+//Update Data
+Route::put("update",[ProductController::class,"updateProduct"]);
+
+//Search Data
+Route::get("search/{id}",[ProductController::class,"searchProduct"]);
+
+//Delete Data
+Route::delete("delete/{id}",[ProductController::class,"deleteProduct"]);
