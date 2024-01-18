@@ -12,6 +12,14 @@ class Products extends Seeder
      */
     public function run(): void
     {
-        
+        DB::table("products")->insert(
+            [
+                'name'=>'pen',
+                'category'=>'software',
+                'price'=>50,
+                'quantity'=>4,
+    
+            ]
+          );
     }
 }
